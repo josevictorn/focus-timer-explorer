@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: boder-box;
+}
+
+:root {
+  --background: #FFFFFF;
+  --bg-button: #EFEEF5;
+  --bg-button-dark: #E6E4EF;
+  --bg-button-light: #F7F6F6;
+
+  --secondary-color: #1B1A27;
+
+  --primary-color: #98E000;
+  --primary-color-light: #9FEB00;
+
+  font-size: 62.5%;
+}
+
+:root.dark {
+  --background: #1B1A27;
+  --bg-button: #242133;
+  --bg-button-dark: #F6F3FF;
+  --bg-button-light: #2C293B;
+
+  --secondary-color: #F6F3FF;
+
+  --primary-color: #98E000;
+  --primary-color-light: #9FEB00;
+
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--background);
+  font-size: 1.6rem;
+}
+
+.container {
+  max-width: 114.4rem;
+  margin: auto;
+}
+
+header {
+  margin-top: 2.4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+header svg path {
+  fill: var(--secondary-color);
+}
+
+header button {
+  background: var(--bg-button);
+  border: none;
+
+  padding: 1.8rem;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  transition: .3s;
+}
+
+header button:hover {
+  filter: brightness(0.85);
+}
+
+header button svg path, main #controls button svg path {
+  fill: var(--secondary-color);
+}
+
+main {
+  margin-top: 7.2rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.countdown {
+  text-align: center;
+  width: 56.4rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.timer span {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 16rem;
+  line-height: 17.2rem;
+
+  color: var(--secondary-color);
+}
+
+.controls {
+  display: flex;
+  gap: 3.2rem;
+
+  justify-content: center;
+}
+
+.controls button {
+  height: 4.8rem;
+  width: 4.8rem;
+
+  border:none;
+  background: var(--bg-button);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  transition: .3s;
+}
+
+.controls button svg path {
+  fill: var(--secondary-color);
+}
+
+.controls button:hover {
+  filter: brightness(0.85);
+}
+
+.controls .hide {
+  display: none;
+}
+
+.countdown p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+
+  margin-top: 1.6rem;
+
+  color: var(--secondary-color);
+}
+
+.controls-songs {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 3.6rem;
+  grid-row-gap: 3.6rem;
+}
+
+.controls-songs button {
+  padding: 3.2rem 4.8rem;
+
+  background: var(--bg-button);
+  border: none;
+
+  color: var(--secondary-color);
+
+  border-radius: 2.4rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+
+  cursor: pointer;
+
+  transition: .3s;
+}
+
+.controls-songs button.playing {
+  background: #98E000;
+  color: #FAF9FE;
+}
+
+.controls-songs button:hover {
+  filter: brightness(0.9);
+}
+
+.controls-songs button svg circle {
+  fill: var(--bg-button-light);
+}
+
+.controls-songs button.playing svg circle {
+  fill: #9FEB00;
+}
+
+.controls-songs button svg path {
+  fill: var(--secondary-color);
+}
+
+.controls-songs button.playing svg path {
+  fill: #FDFDFE;
+}
